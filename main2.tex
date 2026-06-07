@@ -1,0 +1,204 @@
+% main.tex
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage{hydroNova}
+\usepackage[printonlyused,withpage]{acronym}
+\begin{document}
+\justifying
+\selectlanguage{french}
+
+%----------------------------------------------------------------
+% PAGES PRÉLIMINAIRES
+%----------------------------------------------------------------
+\pagestyle{preStyle}
+\pagenumbering{roman}
+
+% PAGE DE GARDE
+\begin{titlepage}
+  \begin{center}
+    \begin{minipage}{0.45\textwidth}
+      \begin{flushleft}
+        \includegraphics[height=3.5cm]{public/isetlogo.png}
+      \end{flushleft}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+      \begin{flushright}
+        \includegraphics[height=3.5cm]{public/logosociete.jpeg}
+      \end{flushright}
+    \end{minipage}
+    
+    \vspace{1.5cm}
+    {\fontsize{14}{17}\selectfont\textbf{Institut Supérieur des Études Technologiques de Mahdia}}\\[0.3cm]
+    {\fontsize{12}{15}\selectfont\textbf{Département : Technologies de l'Informatique}}\\[0.3cm]
+    {\fontsize{12}{15}\selectfont\textbf{Développement des Systèmes d'Information}}\\[1.5cm]
+    
+    \rule{\linewidth}{0.6pt} \\[1cm]
+    {\fontsize{22}{26}\selectfont\textbf{Rapport de Projet de Fin d'Études}}\\[0.8cm]
+    \rule{\linewidth}{0.6pt} \\[2cm]
+    
+    {\fontsize{18}{22}\selectfont\textbf{HydroNova : Serre Intelligente et Automatisée}}\\[0.4cm]
+    {\fontsize{14}{17}\selectfont\textbf{IoT · Intelligence Artificielle · Application Mobile}}\\[2.5cm]
+    
+    \begin{minipage}[t]{0.45\textwidth}
+      \begin{flushleft}
+        \textbf{Élaboré par :}\\[0.2cm]
+        Wael Houidi\\[0.1cm]
+        Ahmed Melien
+      \end{flushleft}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+      \begin{flushright}
+        \textbf{Encadré par :}\\[0.2cm]
+        Mme. Afifa KHALIFA (Académique)\\[0.1cm]
+        M. Hamza SESSI (Entreprise)
+      \end{flushright}
+    \end{minipage}
+    
+    \vfill
+    {\fontsize{12}{15}\selectfont\textbf{Organisme d'Accueil :} MicroEdition}\\[0.4cm]
+    {\fontsize{12}{15}\selectfont\textbf{Période :} 02 Février 2026 -- 01 Juin 2026}\\[0.4cm]
+    \vspace*{0.5cm}
+  \end{center}
+\end{titlepage}
+
+% RÉSUMÉ
+\clearpage
+\thispagestyle{preStyle}
+\begin{center}
+  {\fontsize{14}{17}\selectfont\bfseries Résumé}
+\end{center}
+\noindent
+Ce rapport présente le projet \textbf{HydroNova}, une solution de serre intelligente et automatisée dédiée à la production de fourrage hydroponique. Conçu pour répondre à la pénurie mondiale d'eau et à l'instabilité climatique, ce système permet de réduire la consommation d'eau de près de 90\% par rapport aux méthodes agricoles traditionnelles~\cite{hydroponics_water}.
+
+L'architecture du système repose sur une infrastructure multi-couches découplée : une couche Internet des Objets (IoT) pilotée par un contrôleur Edge Raspberry Pi assurant une régulation environnementale autonome ; une couche d'Intelligence Artificielle utilisant des réseaux de neurones convolutifs (CNN) quantifiés pour la détection en temps réel des maladies végétales ; et un noyau backend sous Spring Boot exploitant TimescaleDB pour l'ingestion de données temporelles. L'interaction utilisateur est assurée par une application mobile Flutter pour l'agriculteur et un tableau de bord React/Grafana pour la supervision administrative. Développé selon la méthodologie du Cycle en V, ce projet valide l'intégration entre le matériel embarqué et l'architecture logicielle cloud.
+
+\noindent\textbf{Mots-clés :} Hydroponie, IoT, Raspberry Pi, Intelligence Artificielle, CNN, Flutter, MQTT, Cycle en V, Agriculture 4.0.
+
+\vspace{1cm}
+\selectlanguage{english}
+\begin{center}
+  {\fontsize{14}{17}\selectfont\bfseries Abstract}
+\end{center}
+\noindent
+This report presents the HydroNova project, an intelligent and automated greenhouse solution dedicated to hydroponic fodder production. Designed to address global water scarcity and climate variability, the system reduces water consumption by up to 90\% compared to traditional agricultural methods.
+
+The system architecture is built upon a decoupled multi-layered infrastructure: an Internet of Things (IoT) layer featuring a Raspberry Pi edge controller ensuring autonomous environmental regulation; an Artificial Intelligence layer utilizing quantized CNN architectures for real-time plant disease detection; and a Spring Boot backend leveraging TimescaleDB for temporal data ingestion. User interaction is provided through a Flutter mobile application for farmers and a React/Grafana dashboard for administrative supervision. Developed following the V-Model engineering methodology, this project validates the integration between embedded hardware and cloud software architecture.
+
+\noindent\textbf{Keywords:} Hydroponics, IoT, Raspberry Pi, Artificial Intelligence, CNN, Flutter, MQTT, V-Model, Agriculture 4.0.
+\selectlanguage{french}
+
+% DÉDICACES WAEL
+\clearpage
+\thispagestyle{preStyle}
+\null\vspace*{\fill}
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries DÉDICACES}\\[1cm]
+  \rule{0.5\textwidth}{0.5pt}\\[1.5cm]
+\end{center}
+\begin{flushright}
+  \itshape
+  Je dédie ce travail à ma famille, les piliers silencieux de ma force. Merci pour votre soutien inconditionnel, vos immenses sacrifices et pour avoir cru en moi tout au long de mon parcours académique.\\[0.5cm]
+  
+  À ma mère, Moufida Mighri, la pierre angulaire de ma réussite et ma première et plus grande supportrice. Ton amour et tes prières ont été la lumière me guidant à travers chaque défi. J'espère que cet accomplissement te rend fière.\\[0.5cm]
+  
+  À l'âme de mon défunt oncle, Amor Mighri. Bien que tu ne sois plus parmi nous, ta mémoire reste une part indélébile de mon parcours, et ton nom reste gravé dans mon cœur comme une source d'inspiration constante.\\[0.5cm]
+  
+  À mes encadrants, pour leurs conseils inestimables, leur patience et l'expertise technique qui a permis de forger ce projet.\\[0.5cm]
+  
+  Enfin, à tous ceux qui ont contribué, ne serait-ce que par un mot gentil, à l'aboutissement de ce travail.\\[0.8cm]
+  
+  \textbf{\Large Wael HOUIDI}
+\end{flushright}
+\vspace*{\fill}
+
+% DÉDICACES AHMED
+\clearpage
+\thispagestyle{preStyle}
+\null\vspace*{\fill}
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries DÉDICACES}\\[1cm]
+  \rule{0.5\textwidth}{0.5pt}\\[1.5cm]
+\end{center}
+\begin{flushright}
+  \itshape
+  À ma famille,\\
+  pour leur soutien inconditionnel et leurs immenses sacrifices\\
+  tout au long de mon parcours académique.\\[0.5cm]
+  
+  À mes encadrants,\\
+  pour leurs directives, leur patience et leur précieuse expertise technique.\\[0.5cm]
+  
+  \textbf{\Large Ahmed MILIEN}
+\end{flushright}
+\vspace*{\fill}
+
+% REMERCIEMENTS
+\clearpage
+\thispagestyle{preStyle}
+\begin{center}
+  {\fontsize{16}{20}\selectfont\bfseries Remerciements}
+\end{center}
+\noindent
+Avant tout, nous rendons grâce à \textbf{Allah Le Tout-Puissant} de nous avoir accordé la santé, la patience, la volonté et le courage nécessaires pour mener à bien ce projet de fin d'études. C'est par Sa grâce et Sa bénédiction que ce travail a pu voir le jour.
+
+\noindent
+Nous tenons ensuite à exprimer notre profonde et sincère gratitude à toutes les personnes qui ont contribué, de près ou de loin, à la réalisation de ce projet.
+
+\noindent
+Nos plus vifs remerciements s'adressent à notre encadrante académique, \textbf{Mme. Afifa Khalifa}, pour la qualité de son encadrement, ses orientations pertinentes, sa disponibilité constante et son suivi rigoureux tout au long de l'élaboration de ce rapport. Ses conseils avisés ont été déterminants pour garantir la rigueur scientifique de notre travail.
+
+\noindent
+Notre sincère reconnaissance va également à notre encadrant professionnel, \textbf{M. Hamza Sessi}, pour sa confiance, son accompagnement technique et le partage généreux de son expertise. Nous remercions aussi l'ensemble de l'équipe de \textbf{MicroEdition} pour leur accueil chaleureux et la mise à disposition des ressources matérielles et logicielles indispensables à la concrétisation de ce projet.
+
+\noindent
+Nous adressons nos remerciements respectueux aux membres du jury pour l'honneur qu'ils nous font en acceptant d'évaluer ce travail.
+
+\noindent
+Nous exprimons également notre gratitude envers l'administration et le corps professoral de l'\textbf{ISET de Mahdia}, en particulier le Département Technologies de l'Informatique, pour la qualité de la formation dispensée et pour nous avoir transmis les fondements académiques nécessaires à notre parcours.
+
+\noindent
+Enfin, une pensée particulière va à nos familles, pour leur soutien inconditionnel et leurs sacrifices constants, ainsi qu'à nos amis et collègues pour leur encouragement et leur présence à nos côtés tout au long de cette expérience enrichissante.
+
+% TABLE DES MATIÈRES, FIGURES, TABLEAUX, ACRONYMES
+\clearpage
+\thispagestyle{preStyle}
+\tableofcontents
+
+\clearpage
+\thispagestyle{preStyle}
+\listoffigures
+
+\clearpage
+\thispagestyle{preStyle}
+\listoftables
+\chapter*{Liste des acronymes}
+\begin{acronym}
+  \input{acronyms_def}
+\end{acronym}
+\addcontentsline{toc}{chapter}{Liste des acronymes}
+%----------------------------------------------------------------
+% DÉBUT DE LA NUMÉROTATION ARABE
+%----------------------------------------------------------------
+\clearpage
+\pagestyle{mainStyle}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%----------------------------------------------------------------
+% INCLUSION DES CHAPITRES
+%----------------------------------------------------------------
+\include{introduction}
+\include{Chapitre1}
+\include{Chapitre2}
+\include{Chapitre3}
+\include{Chapitre4}
+\include{Chapitre5}
+\include{Chapitre6}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliographie}
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,65 @@
+# ==========================================================
+# Fichiers temporaires générés par LaTeX
+# ==========================================================
+
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+
+# Bibliographie
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Index, glossaires et nomenclatures
+*.idx
+*.ilg
+*.ind
+*.ist
+*.glo
+*.glg
+*.gls
+*.glsdefs
+*.acn
+*.acr
+*.alg
+*.nlo
+*.nls
+
+# Fichiers temporaires supplémentaires
+*.tmp
+*.bak
+*.backup
+*.sav
+*.swp
+*.swo
+*~
+*.lock
+
+# Dossiers de compilation
+build/
+out/
+_output/
+latex.out/
+
+# VS Code / éditeurs
+.vscode/
+.idea/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db

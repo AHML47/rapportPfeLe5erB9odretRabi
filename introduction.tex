@@ -1,0 +1,20 @@
+\chapter*{Introduction Générale}
+\addcontentsline{toc}{chapter}{Introduction Générale}
+\markboth{Introduction Générale}{Introduction Générale}
+
+Le secteur agricole se trouve actuellement confronté à une convergence de défis mondiaux. Le changement climatique, la dégradation des écosystèmes et la pénurie croissante d'eau douce remettent en question les paradigmes agricoles traditionnels. Simultanément, la croissance de la population mondiale exige des rendements supérieurs sur des terres arables en diminution constante. Dans ce contexte, l'agriculture en environnement contrôlé, et plus particulièrement la production de fourrage hydroponique, émerge comme une alternative viable et efficiente. En substituant le sol par des solutions aquatiques recirculantes et riches en nutriments, les systèmes hydroponiques peuvent réduire la consommation d'eau agricole jusqu'à 90~\% selon la littérature~\cite{hydroponics_water}, tout en augmentant significativement la densité de production par mètre carré.
+
+Cependant, la vulnérabilité intrinsèque des systèmes hydroponiques représente un défi d'ingénierie majeur. Dépourvus de la capacité de tamponnement naturel du sol, les environnements agricoles en intérieur exigent une précision microclimatique élevée. Même des fluctuations transitoires de l'humidité ambiante, de la température, des cycles photopériodiques ou de la conductivité électrique des nutriments peuvent déclencher une défaillance des cultures. De plus, les conditions denses et humides nécessaires à la croissance du fourrage favorisent la propagation fongique. Par conséquent, la supervision humaine manuelle se révèle insuffisante pour répondre aux exigences en temps réel de l'hydroponie moderne.
+
+Ce projet de fin d'études, mené sous la supervision technique de \textbf{MicroEdition}, répond à ce dilemme à travers la conception architecturale et l'implémentation du système \textbf{HydroNova}. Cette plateforme constitue un écosystème agricole intelligent et autonome qui articule l'ingénierie matérielle et l'analyse logicielle. En faisant converger l'Internet des Objets (IoT) pour une régulation environnementale déterministe, et l'Intelligence Artificielle (Edge AI) pour des diagnostics biologiques proactifs, le système vise à réduire significativement l'intervention humaine dans la boucle de contrôle agricole.
+
+La problématique centrale qui motive ce projet est la suivante : \textit{Comment concevoir un système de contrôle IoT résilient et capable de fonctionner hors-ligne, augmenté par des réseaux de neurones convolutifs embarqués, afin d'automatiser, superviser et protéger biologiquement la production de fourrage hydroponique ?}
+
+Pour aborder cette question avec méthode, ce rapport est structuré en quatre chapitres détaillés :
+%%%%%%A corriger
+\begin{itemize}
+  \item \textbf{Chapitre I} établit le contexte général du projet, présente l'organisme d'accueil (MicroEdition), effectue une analyse des solutions agricoles existantes, et définit l'architecture globale proposée ainsi que la méthodologie en Cycle en V adoptée.
+  \item \textbf{Chapitre II} délimite les exigences fonctionnelles et non fonctionnelles du système, en formalisant les interactions entre les acteurs humains et matériels via les diagrammes UML (Unified Modeling Language).
+  \item \textbf{Chapitre III} présente l'architecture globale du système, organisée en couches découplées, allant du réseau physique IoT (Edge) jusqu'aux couches de persistance Cloud.
+  \item \textbf{Chapitre IV} couvre la réalisation technique du projet. Il détaille d'abord l'infrastructure matérielle et IoT (isolation électrique, Raspberry Pi, MQTT), puis l'intégration de l'Intelligence Artificielle embarquée (Edge AI) pour la détection des maladies. Il présente ensuite les interfaces applicatives développées (application mobile Flutter et tableau de bord web React), pour conclure sur la stratégie de déploiement Cloud (Docker, TimescaleDB, Spring Boot) et l'orchestration du backend.
+\end{itemize}
