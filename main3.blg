@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main3.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre1.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre2.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre3.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre4.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre5.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: Chapitre6.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--I didn't find a database entry for "hydroponics_water"
+You've used 27 entries,
+            2118 wiz_defined-function locations,
+            625 strings with 9024 characters,
+and the built_in function-call counts, 9683 in all, are:
+= -- 815
+> -- 698
+< -- 4
++ -- 278
+- -- 248
+* -- 694
+:= -- 1694
+add.period$ -- 81
+call.type$ -- 27
+change.case$ -- 201
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 354
+empty$ -- 707
+format.name$ -- 248
+if$ -- 1947
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 26
+newline$ -- 138
+num.names$ -- 54
+pop$ -- 264
+preamble$ -- 1
+purify$ -- 173
+quote$ -- 0
+skip$ -- 203
+stack$ -- 0
+substring$ -- 235
+swap$ -- 53
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 108
+warning$ -- 0
+while$ -- 64
+width$ -- 29
+write$ -- 281
+(There was 1 warning)
