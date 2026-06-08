@@ -1,8 +1,8 @@
 
 \chapter{ANALYSE ET SPÉCIFICATION DES BESOINS}
 
-\section*{Introduction du Chapitre}
-\addcontentsline{toc}{section}{Introduction du Chapitre}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 La réussite technique du \textit{HydroNova} repose sur une définition précise des attentes des utilisateurs et des exigences opérationnelles des machines. Ce chapitre détaille l'analyse des besoins en segmentant le système en quatre piliers technologiques : l'application mobile pour l'exploitant, l'interface web pour l'administration, l'infrastructure IoT pour le contrôle local, et l'intelligence artificielle pour le diagnostic sanitaire. Cette approche permet de garantir que chaque composant répond aux standards de performance et de fiabilité requis.
 
@@ -15,19 +15,25 @@ La conception d’un écosystème IoT intelligent et décentralisé nécessite u
 Dans le cadre de ce projet, les acteurs sont répartis en deux catégories principales : les acteurs humains et les acteurs systémiques.
 
 
-\subsection{Acteurs }
+\subsection{Acteurs}
 
 \begin{itemize}
 	\item \textbf{L'Agriculteur :} Acteur principal du système et utilisateur final de l’application mobile. Il supervise les paramètres environnementaux de la serre, contrôle les équipements connectés, suit les cycles de production et exploite les outils d’assistance intelligente afin d’optimiser la production hydroponique.
 	
-	\item \textbf{Visiteur :} Utilisateur disposant d’un accès restreint à certaines fonctionnalités publiques de la plateforme. Il peut interagir avec le chatbot intelligent, consulter les actualités agricoles, s’abonner aux mises à jour et accéder à des contenus d’information générale sur l’hydroponie.
+	\item \textbf{Visiteur :} Utilisateur disposant d’un accès restreint à certaines fonctionnalités publiques de la plateforme. Il peut interagir avec le chatbot intelligent, consulter les actualités agricole .
 	
 	\item \textbf{L'Administrateur :} Responsable de la gestion globale de la plateforme via l’interface web d’administration. Il supervise les utilisateurs, les serres déployées, les configurations système, les droits d’accès ainsi que les opérations de maintenance et de supervision centralisée.
 	
-	\item \textbf{Agent Technique :} Technicien chargé des interventions techniques sur les équipements déployés. Il assure les opérations de maintenance corrective et préventive, le diagnostic des anomalies, ainsi que le déploiement des mises à jour matérielles et logicielles.
+	\item \textbf{Agent Technique :} Technicien chargé des interventions techniques sur les équipements déployés. Il assure les opérations de maintenance corrective et préventive .
 \end{itemize}
+    %================================================================
+\section{Spécification des Besoins}
+%================================================================
+
+Après l’identification des acteurs, cette section formalise les besoins fonctionnels et non fonctionnels du système. L’analyse est structurée autour des quatre piliers technologiques de la plateforme : le sous-système mobile destiné à l’exploitant, le sous-système web dédié à l’administration, le sous-système IoT assurant le contrôle local, et le sous-système d’intelligence artificielle responsable du diagnostic sanitaire.
+
 \subsection{Sous-système Mobile}
-Cette section présente les besoins fonctionnels et non fonctionnels de l’application mobile du système.  
+Cette section présente les besoins fonctionnels et non fonctionnels de l’application mobile du système.
 Elle décrit les principales fonctionnalités offertes aux différents types d’utilisateurs ainsi que les contraintes garantissant la qualité du service.
 \subsubsection{Besoins Fonctionnels}
 
@@ -60,7 +66,7 @@ Elle décrit les principales fonctionnalités offertes aux différents types d�
 	Agriculteur \\ \hline
 	
 	\textbf{Contrôle des équipements de la serre} &
-	Le système doit permettre le contrôle manuel des équipements tels que l’irrigation, l’éclairage et la ventilation. &
+	Le système doit permettre le contrôle manuel des équipements tels que l’irrigation, l’éclairage et la ventilation ... &
 	Agriculteur \\ \hline
 	
 	\textbf{Analyse et historique des cultures} &
@@ -72,7 +78,7 @@ Elle décrit les principales fonctionnalités offertes aux différents types d�
 	Agriculteur, Visiteur \\ \hline
 	
 	\textbf{Notifications et alertes de la serre} &
-	Le système doit envoyer à l’agriculteur des notifications liées aux anomalies détectées, aux alertes critiques issues des capteurs ainsi qu’aux recommandations générées par les modèles internes. &
+	Le système doit envoyer à l’agriculteur des notifications liées aux anomalies détectées, aux alertes critiques issues des capteurs . &
 	Agriculteur \\ \hline
 	
 	\textbf{Notifications de contenu et actualités} &
@@ -87,7 +93,7 @@ Elle décrit les principales fonctionnalités offertes aux différents types d�
 	\label{tab:bf-mobile}
 \end{longtable}
 \endgroup
-\subsubsection{Besoins non Fonctionnels}
+\subsubsection{Besoins Non Fonctionnels}
 
 
 \begingroup
@@ -113,15 +119,15 @@ Elle décrit les principales fonctionnalités offertes aux différents types d�
 	\\ \hline
 	
 	\textbf{Réactivité} &
-	L’interface doit rester fluide même en cas de forte charge, avec une gestion optimisée des mises à jour via WebSockets ou mécanismes équivalents.
+	L’interface doit rester fluide même en cas de forte charge, avec une gestion optimisée des mises à jour via un mécanismes équivalents.
 	\\ \hline
 	
 	\textbf{Disponibilité} &
-	Le système doit assurer une disponibilité continue des fonctionnalités essentielles, même en cas de perte temporaire de connectivité réseau.
+	Le système doit assurer une disponibilité continue des fonctionnalités essentielles. 
 	\\ \hline
 	
 	\textbf{Sécurité} &
-	L’accès à l’application doit être sécurisé par authentification (JWT ou équivalent), avec chiffrement des échanges entre le client mobile et le backend.
+	L’accès à l’application doit être sécurisé par authentification , avec chiffrement des échanges entre le client mobile et le backend.
 	\\ \hline
 	
 	\textbf{Ergonomie} &
@@ -212,10 +218,7 @@ Elle décrit les fonctionnalités dédiées à la supervision, à la gestion du 
 		\\ \hline
 		
 		\rowcolor[HTML]{EFEFEF}
-		\textbf{Audit et traçabilité système} &
-		Le système doit enregistrer toutes les opérations critiques afin d’assurer la traçabilité et la sécurité des actions effectuées. &
-		Administrateur
-		\\ \hline
+		
 		
 		\textbf{Gestion des interventions techniques} &
 		Le système doit permettre la création, la consultation et le suivi des tickets d’intervention liés aux équipements des serres. &
@@ -223,12 +226,9 @@ Elle décrit les fonctionnalités dédiées à la supervision, à la gestion du 
 		\\ \hline
 		
 		\rowcolor[HTML]{EFEFEF}
-		\textbf{Maintenance et diagnostic des équipements} &
-		Le système doit permettre la réalisation des opérations de maintenance, le diagnostic des anomalies et la documentation des interventions techniques. &
-		Agent Technique
-		\\ \hline
 		
-		\textbf{Déploiement des mises à jour (OTA)} &
+		
+		\textbf{Déploiement des mises à jour} &
 		Le système doit permettre la mise à jour à distance des équipements, capteurs, actionneurs et modules logiciels. &
 		Agent Technique
 		\\ \hline
@@ -296,27 +296,29 @@ Elle décrit les fonctionnalités dédiées à la supervision, à la gestion du 
 Le système embarqué constitue le cœur opérationnel de la serre intelligente. Il assure le contrôle local des équipements ainsi que la collecte des données en périphérie (Edge Computing), garantissant ainsi l’autonomie du système même en cas de perte de connectivité.
 
 % ==========================================================
+\subsubsection{Besoins Fonctionnels}
+
 {\small
 	\renewcommand{\arraystretch}{1.5}
 	\begin{longtable}{|p{4cm}|p{9cm}|}
-		
+
 		\hline
 		\rowcolor[HTML]{2C3E50}
 		\textcolor{white}{\textbf{Besoin}} &
 		\textcolor{white}{\textbf{Description}}
 		\\ \hline
 		\endfirsthead
-		
+
 		\hline
 		\rowcolor[HTML]{2C3E50}
 		\textcolor{white}{\textbf{Besoin}} &
 		\textcolor{white}{\textbf{Description}}
 		\\ \hline
 		\endhead
-		
+
 		\rowcolor[HTML]{EFEFEF}
 		\textbf{Collecte des données environnementales} &
-		Le système doit assurer l’acquisition continue et périodique des données provenant des capteurs environnementaux (température, humidité, CO2, niveau d’eau, pH, luminosité). 
+		Le système doit assurer l’acquisition continue et périodique des données provenant des capteurs environnementaux (température, humidité, CO2 ...). 
 		\\ \hline
 		
 		\textbf{Communication IoT avec le backend} &
@@ -406,14 +408,8 @@ Le sous-système d’intelligence artificielle constitue le module central charg
 		Le module d’intelligence artificielle doit analyser localement les images capturées afin de détecter les maladies, carences et anomalies affectant les cultures. 
 		\\ \hline
 		
-		\textbf{Certitude des prédictions} &
-		Le modèle d'IA doit bien connaître les caractéristiques des maladies afin de garantir un niveau de certitude élevé lors des détections.
-		\\ \hline
+
 		
-		\rowcolor[HTML]{EFEFEF}
-		\textbf{Base de connaissances étendue} &
-		Le modèle doit être entraîné pour connaître et identifier  des maladies susceptibles d'apparaître sur les cultures.
-		\\ \hline
 		
 		\caption{Besoins fonctionnels du module IA}
 		\label{tab:bf-ia}
@@ -441,13 +437,13 @@ Le sous-système d’intelligence artificielle constitue le module central charg
 		\textcolor{white}{\textbf{Critère}} &
 		\textcolor{white}{\textbf{Exigence}}
 		\\ \hline
+        
 		\endhead
-		
 		\rowcolor[HTML]{EFEFEF}
-		\textbf{Performance du module IA} &
-		Le modèle d’intelligence artificielle doit assurer la capacité de prédiction des anomalies afin de permettre une intervention précoce.
+		\textbf{Certitude des prédictions} &
+		Le modèle d'IA doit bien connaître les caractéristiques des maladies afin de garantir un niveau de certitude élevé lors des détections.
 		\\ \hline
-		
+
 		\caption{Besoins non fonctionnels du module IA}
 		\label{tab:bnf-ia}
 		
@@ -479,17 +475,17 @@ Le diagramme des cas d'utilisation permet de définir les frontières fonctionne
 
 La représentation globale de ces interactions est illustrée par le diagramme suivant :
 
-\begin{figure}[!htbp]
+
+
+Comme le montre la figure~\ref{fig:usekbir}, le système est structuré autour de plusieurs acteurs et cas d’utilisation, permettant de visualiser clairement les fonctionnalités offertes ainsi que les échanges entre les différentes entités.
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{public/casecase.drawio.png}
 	\caption{Diagramme des cas d’utilisation du système}
 	\label{fig:usekbir}
 \end{figure}
-
-Comme le montre la figure~\ref{fig:usekbir}, le système est structuré autour de plusieurs acteurs et cas d’utilisation, permettant de visualiser clairement les fonctionnalités offertes ainsi que les échanges entre les différentes entités.
-
-\subsectiontitle{ Diagramme de classe }
-Le diagramme de classe métier présenté par la figure  décrit les entités clés intervenant dans le fonctionnement du système ainsi que leurs associations.
+\subsectiontitle{Diagramme de classe}
+Le diagramme de classe métier présenté par la figure~\ref{fig:classanlse} décrit les entités clés intervenant dans le fonctionnement du système ainsi que leurs associations.
 \begin{landscape} % active le mode paysage
 \begin{figure}[tbph!]
 	\centering
@@ -498,3 +494,12 @@ Le diagramme de classe métier présenté par la figure  décrit les entités cl
 	\label{fig:classanlse}
 \end{figure}
 \end{landscape}
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+Ce chapitre a permis de formaliser l’analyse et la spécification des besoins du système \textit{HydroNova}. Après avoir identifié les différents acteurs intervenant dans la plateforme, nous avons recensé de manière structurée les besoins fonctionnels et non fonctionnels propres à chacun des quatre sous-systèmes : l’application mobile de l’exploitant, l’interface web d’administration, l’infrastructure IoT embarquée et le module d’intelligence artificielle.
+
+Cette spécification a ensuite été consolidée par une modélisation UML, à travers le diagramme des cas d’utilisation et le diagramme de classes, offrant une représentation claire et normalisée des interactions et des entités du système. L’ensemble constitue une base rigoureuse garantissant la traçabilité entre les exigences exprimées et les choix techniques à venir.
+
+Les besoins étant désormais clairement établis et formalisés, le chapitre suivant aborde la phase de conception. Il détaillera l’architecture globale de la solution ainsi que les choix de conception adoptés afin de répondre aux exigences fonctionnelles et non fonctionnelles identifiées dans ce chapitre.
