@@ -15,22 +15,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {IV.1}{\ignorespaces Modèle IoT en 4 couches}}{27}{figure.caption.21}%
 \contentsline {figure}{\numberline {IV.2}{\ignorespaces Architecture globale du système en quatre couches fonctionnelles}}{27}{figure.caption.22}%
-\contentsline {figure}{\numberline {IV.3}{\ignorespaces Architecture globale du système IoT de la serre intelligente}}{29}{figure.caption.23}%
-\contentsline {figure}{\numberline {IV.4}{\ignorespaces Schéma détaillé du câblage des capteurs et actionneurs avec le microcontrôleur}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {IV.5}{\ignorespaces Relation entre le composant principal et le service de déploiement ThingsBoard}}{30}{figure.caption.25}%
-\contentsline {figure}{\numberline {IV.6}{\ignorespaces Architecture logicielle embarquée au sein du système}}{30}{figure.caption.26}%
-\contentsline {figure}{\numberline {IV.7}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{33}{figure.caption.28}%
-\contentsline {figure}{\numberline {IV.8}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{34}{figure.caption.29}%
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces Capteur DHT11}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Capteur ultrasonique }}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Carte Arduino Uno}}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Raspberry Pi 4}}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Schéma global de câblage des capteurs, actionneurs et unités de contrôle}}{30}{figure.caption.25}%
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Interaction entre le composant principal et le service de déploiement ThingsBoard}}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Architecture logicielle embarquée au sein du système}}{32}{figure.caption.27}%
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces Flux des communications entre les composants IoT}}{34}{figure.caption.28}%
+\contentsline {figure}{\numberline {IV.11}{\ignorespaces Diagramme de séquence du processus de mise à jour OTA via ThingsBoard}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {IV.12}{\ignorespaces Pipeline CI/CD du logiciel embarqué sur Raspberry Pi déclenché par webhook}}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {IV.13}{\ignorespaces Pipeline CI/CD du firmware Arduino déclenché par webhook}}{36}{figure.caption.31}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {V.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{38}{figure.caption.33}%
-\contentsline {figure}{\numberline {V.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{39}{figure.caption.34}%
-\contentsline {figure}{\numberline {V.3}{\ignorespaces Architecture de ConvNeXt.}}{39}{figure.caption.35}%
-\contentsline {figure}{\numberline {V.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{41}{figure.caption.37}%
-\contentsline {figure}{\numberline {V.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{41}{figure.caption.38}%
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{39}{figure.caption.34}%
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{40}{figure.caption.35}%
+\contentsline {figure}{\numberline {V.3}{\ignorespaces Architecture de ConvNeXt.}}{40}{figure.caption.36}%
+\contentsline {figure}{\numberline {V.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{42}{figure.caption.38}%
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{42}{figure.caption.39}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {VI.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{46}{figure.caption.42}%
-\contentsline {figure}{\numberline {VI.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{47}{figure.caption.43}%
-\contentsline {figure}{\numberline {VI.3}{\ignorespaces Architecture de ConvNeXt.}}{47}{figure.caption.44}%
-\contentsline {figure}{\numberline {VI.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{49}{figure.caption.46}%
-\contentsline {figure}{\numberline {VI.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {VI.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{47}{figure.caption.43}%
+\contentsline {figure}{\numberline {VI.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{48}{figure.caption.44}%
+\contentsline {figure}{\numberline {VI.3}{\ignorespaces Architecture de ConvNeXt.}}{48}{figure.caption.45}%
+\contentsline {figure}{\numberline {VI.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{50}{figure.caption.47}%
+\contentsline {figure}{\numberline {VI.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{50}{figure.caption.48}%
 \contentsfinish 

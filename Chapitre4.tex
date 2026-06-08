@@ -75,41 +75,106 @@ L'un des principes directeurs de notre conception est l'\textbf{indépendance vi
 Cette indépendance s'étend au-delà du seul contrôleur : \textbf{capteurs et actionneurs sont eux aussi des composants extensibles}. Le principe fondateur est qu'à chaque composant physique présent dans la serre correspond une entité dans le backend. Un capteur de température installé sur l'Arduino, une pompe pilotée par un relais, un moteur pas à pas: chacun de ces éléments matériels dispose d'une représentation dans le modèle de données du serveur, portant ses caractéristiques (unité de mesure, commandes supportées, topics de communication). L'intégration d'un nouveau composant physique se résume donc à le déclarer dans ce référentiel commun, sans aucune refonte structurelle ni du micrologiciel ni du backend. C'est cette correspondance biunivoque entre le monde physique et le modèle logiciel qui garantit la compatibilité permanente entre les deux couches et qui permet à l'ensemble du système d'évoluer de façon cohérente.
 \subsubsection*{Architecture matérielle de la serre}
 
-La figure~\ref{fig:archi_iot} illustre l’architecture globale du système embarqué de la serre. Elle met en évidence l’organisation des différents composants matériels, notamment les capteurs et les actionneurs, ainsi que leur connexion à la carte Arduino. On y observe également la liaison de communication série assurant l’échange de données entre l’Arduino et le Raspberry Pi 4, qui joue le rôle de passerelle intelligente vers le système de traitement.
+
+L’architecture matérielle du système embarqué de la serre intelligente repose sur une organisation hiérarchique composée de trois niveaux principaux : la couche de perception (capteurs), la couche de contrôle (unités de traitement) et la couche de communication. Cette structure permet d’assurer la collecte, le traitement et la transmission des données environnementales en temps réel.
+
+\paragraph{Couche de perception (capteurs)}
+
+La couche de perception regroupe les différents capteurs chargés de mesurer les paramètres environnementaux de la serre.
+
+Le capteur de température et d’humidité DHT11 permet de mesurer les conditions climatiques internes telles que la température et l’humidité. Ces données sont essentielles pour assurer un suivi précis de l’environnement de culture.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{public/archi_IOTF}
-	\caption{Architecture globale du système IoT de la serre intelligente}
-	\label{fig:archi_iot}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{public/DHT11-capteure}
+		\caption{Capteur DHT11}
+		\label{fig:dht11-capteure}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{"public/—Pngtree—hc-sr04 ultrasonic distance sensor module_23358925"}
+		\caption{Capteur ultrasonique }
+		\label{fig:hc-sr04}
+	\end{minipage}
 \end{figure}
 
-Afin de détailler davantage l’implémentation physique du système, la figure~\ref{fig:cablage} présente le schéma de câblage des capteurs et des actionneurs connectés au contrôleur principal. Elle permet de visualiser précisément les connexions électriques et la répartition des composants au sein de la serre.
+\paragraph{Couche de contrôle}
+
+Les capteurs sont connectés à une carte Arduino, qui constitue l’unité de contrôle de bas niveau. Elle assure la lecture des données issues des capteurs ainsi que la commande des actionneurs de la serre.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.85\linewidth]{"public/—Pngtree—arduino uno microcontroller development board_23417753"}
+		\caption{Carte Arduino Uno}
+		\label{fig:arduino}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=0.85\linewidth]{public/rasberypi}
+		\caption{Raspberry Pi 4}
+		\label{fig:raspberry}
+	\end{minipage}
+\end{figure}
+
+À un niveau supérieur, un Raspberry Pi~4 est utilisé comme unité de traitement centrale. Il joue le rôle de passerelle intelligente entre le système embarqué et les algorithmes de supervision.
+
+\paragraph{Câblage et interconnexion du système}
+
+L’ensemble des composants est interconnecté selon un schéma de câblage global présenté à la figure~\ref{fig:cablage}. Ce schéma illustre les connexions électriques entre les capteurs, l’Arduino, les actionneurs et les modules de communication.
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{public/cablage}
-	\caption{Schéma détaillé du câblage des capteurs et actionneurs avec le microcontrôleur}
+	\caption{Schéma global de câblage des capteurs, actionneurs et unités de contrôle}
 	\label{fig:cablage}
 \end{figure}
 
-La figure~\ref{fig:cablage} vient ainsi compléter la figure~\ref{fig:archi_iot} en apportant une vue détaillée de l’implémentation matérielle, depuis l’architecture globale jusqu’au niveau des connexions physiques.
+Ce câblage met en évidence :
+\begin{itemize}
+	\item la connexion directe des capteurs (DHT11 et HC-SR04) à l’Arduino ;
+	\item la gestion des actionneurs via les sorties de l’Arduino ;
+	\item la liaison de communication série entre l’Arduino et le Raspberry Pi~4 ;
+	\item l’intégration de la boîte d’alimentation centralisée assurant la distribution énergétique à l’ensemble du système.
+\end{itemize}
+
+Enfin, une boîte d’alimentation centralisée assure l’alimentation électrique de tous les composants du système, garantissant la stabilité et la continuité du fonctionnement de l’infrastructure embarquée.
+
 
 \subsubsection*{Architecture logicielle embarquée}
-La couche embarquée n'est pas figée : le logiciel exécuté sur le contrôleur est entièrement \textbf{versionné et mis à jour à distance} (voir la section~\ref{subsec:ota_thingsboard} consacrée à l'OTA). Sur le plan logiciel, le système embarqué se décompose en \textbf{deux ensembles complémentaires} :
+
+L’architecture logicielle embarquée du système n’est pas statique : le logiciel exécuté sur les contrôleurs est entièrement \textbf{versionné et mis à jour à distance}, conformément au mécanisme d’OTA présenté dans la section~\ref{subsec:ota_thingsboard}. Cette capacité permet d’assurer l’évolution continue du système sans intervention physique sur la serre.
+
+Sur le plan conceptuel, l’architecture logicielle embarquée est organisée en \textbf{deux blocs fonctionnels complémentaires} :
 
 \begin{itemize}
-	\item \textbf{Le composant principal (« Main ») :} il regroupe le \textit{logiciel} déployé sur le Raspberry~Pi~4 et le \textit{micrologiciel} (\textit{firmware}) déployé sur l'Arduino. Le logiciel constitue le cœur applicatif du contrôleur : il établit et maintient la connexion MQTT avec le backend, dialogue avec le module d'intelligence artificielle et traduit les consignes reçues en commandes transmises au micrologiciel. Le micrologiciel, quant à lui, exécute de manière déterministe les tâches matérielles de proximité (acquisition des capteurs et pilotage des actionneurs).
-	\item \textbf{Le service ThingsBoard (agent de déploiement) :} il s'agit d'un service autonome dont l'unique vocation est d'\textit{installer, surveiller et mettre à jour} le composant principal (logiciel et micrologiciel). Il assure l'enregistrement du contrôleur auprès de la plateforme ThingsBoard et orchestre l'application des mises à jour distantes (OTA), garantissant ainsi que la serre exécute toujours la dernière version validée du logiciel.
+	\item \textbf{Composant principal (Main) :}  
+	Il regroupe les couches logicielles exécutées sur le Raspberry~Pi~4 ainsi que le firmware embarqué sur l’Arduino.  
+	Sur le Raspberry Pi~4, ce composant constitue le cœur applicatif du système : il assure l’établissement et la maintenance de la connexion MQTT avec le backend, la communication avec le module d’intelligence artificielle, ainsi que l’orchestration globale du système. Il transforme également les décisions issues des services de haut niveau en commandes exploitables par la couche embarquée.
+	
+	Sur l’Arduino, le firmware assure l’exécution déterministe des tâches de bas niveau, notamment l’acquisition des données des capteurs et le pilotage des actionneurs. Il garantit ainsi le fonctionnement temps réel du système matériel.
+	
+	\item \textbf{Service ThingsBoard (agent de déploiement) :}  
+	Il s’agit d’un service indépendant dédié à la gestion du cycle de vie logiciel du système embarqué. Son rôle consiste à installer, surveiller et mettre à jour le composant principal (logiciel et firmware).  
+	Il assure également l’enregistrement du contrôleur auprès de la plateforme ThingsBoard et orchestre les mises à jour OTA, garantissant ainsi que la serre exécute en permanence une version validée et synchronisée du système.
+		Il assure également l’enregistrement du contrôleur auprès de la plateforme ThingsBoard et orchestre les mises à jour OTA, garantissant ainsi que la serre exécute en permanence une version validée et synchronisée du système.	Il assure également l’enregistrement du contrôleur auprès de la plateforme ThingsBoard et orchestre les mises à jour OTA, garantissant ainsi que la serre exécute en permanence une version validée et synchronisée du système.
 \end{itemize}
+
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{public/relationLogEmbeded}
-	\caption{Relation entre le composant principal et le service de déploiement ThingsBoard}
+	\caption{Interaction entre le composant principal et le service de déploiement ThingsBoard}
 	\label{fig:relation_log_embedded}
 \end{figure}
 \paragraph{Architecture au sein du Raspberry Pi 4}
-Le Raspberry Pi 4 constitue l'unité de coordination du système embarqué. Il héberge le logiciel principal (services de supervision, de communication et d'orchestration des traitements locaux) ainsi que l'agent de déploiement ThingsBoard. Son rôle principal est de centraliser les échanges avec le backend via MQTT, de dialoguer avec le module IA et de piloter la logique globale de la serre en relayant les commandes vers l'Arduino.
+Le Raspberry Pi~4 constitue l’unité centrale de coordination du système embarqué. Il héberge l’ensemble des services logiciels de supervision, de communication et d’orchestration des traitements locaux. Il intègre également l’agent de déploiement de la plateforme ThingsBoard, assurant ainsi l’intégration avec le système de supervision IoT.
+
+Son rôle principal est de centraliser les échanges avec le backend via le protocole MQTT, de communiquer avec le module d’intelligence artificielle, et de piloter la logique globale de la serre. Il agit également comme passerelle entre le système de haut niveau et les dispositifs embarqués, en relayant les commandes vers l’Arduino à travers une liaison série.
 
 \begin{figure}[!htbp]
 	\centering
@@ -171,127 +236,111 @@ ou
 Le premier indique l'exécution correcte de la commande tandis que le second signale une erreur détectée lors du traitement , par example : \texttt{OK:done} , \texttt{ERR:bad\_action}
 
 \subsubsection*{Sécurité des communications IoT (MQTTS et TLS)}
-Étant donné la nature critique des commandes transitant entre le Backend et la serre (ex: pilotage des pompes et vannes d'irrigation), la sécurité réseau est une composante structurelle de l'architecture. Toutes les communications télémétriques entre l'unité \textit{Edge} (Raspberry Pi 4) et le broker Mosquitto sont encapsulées dans un tunnel crypté utilisant le protocole \textbf{MQTTS} (MQTT sur TLS 1.2+). L'authentification mutuelle est assurée par l'échange de certificats X.509 et de clés asymétriques, prévenant ainsi toute attaque de type \textit{Man-in-the-Middle} (MitM) ou l'injection de fausses commandes matérielles. De plus, aucun secret critique (mot de passe base de données, clé d'API Gemini) n'est stocké en clair sur le dispositif physique local.
+Étant donné la nature critique des commandes échangées entre le backend et la serre (notamment le pilotage des pompes et des vannes d’irrigation), la sécurité des communications constitue un élément fondamental de l’architecture. L’ensemble des échanges télémétriques entre l’unité \textit{Edge} (Raspberry Pi 4) et le broker Mosquitto est encapsulé dans un canal chiffré reposant sur le protocole \textbf{MQTTS} (MQTT sur TLS 1.2+).
 
-\subsubsection*{Mode Autonome (Architecture Offline-First)}
-Conçu selon le paradigme \textit{Offline-First}, le contrôleur conserve une autonomie de fonctionnement complète en cas de coupure réseau : les cycles d'irrigation, d'éclairage et de ventilation sont maintenus localement à partir de la dernière configuration valide, tandis que les relevés non transmis sont temporisés dans un tampon local (SQLite) avant d'être resynchronisés avec le backend dès le rétablissement de la connexion.
+L’authentification est assurée via un mécanisme de certificats X.509 et de clés asymétriques, garantissant une authentification mutuelle entre les entités communicantes. Cette approche permet de prévenir efficacement les attaques de type \textit{Man-in-the-Middle} (MitM) ainsi que toute tentative d’injection de commandes malveillantes. Par ailleurs, aucun secret sensible (mot de passe de base de données, clés d’API ou tokens) n’est stocké en clair sur le dispositif embarqué.
 
-\subsection{Le mécanisme d'attention et les Transformers}
-Introduit pour le traitement automatique des langues~\cite{vaswani2017attention}, le mécanisme d'\textbf{auto-attention} permet à chaque élément d'une séquence d'interagir directement avec tous les autres, contrairement aux CNN qui ont une vision locale. Cette capacité à capturer des dépendances à longue distance est particulièrement utile en agriculture pour relier des symptômes distants sur une même plante. Les Transformers sont gourmands en données et en calcul, mais des variantes comme le \textbf{Swin Transformer}~\cite{liu2021swin} réduisent la complexité en limitant l'attention à des fenêtres locales.
+\subsubsection*{Mode autonome (architecture Offline-First)}
+Le système adopte une approche \textit{Offline-First} afin d’assurer la continuité des opérations même en cas de perte de connexion réseau.
+Dans ce mode, les cycles d’irrigation, d’éclairage et de ventilation sont exécutés localement à partir de la dernière configuration validée.
+Cette conception garantit le fonctionnement du système sans dépendance permanente au backend.
+Les données générées durant la période de déconnexion sont enregistrées dans une base locale légère (SQLite).
+Ce mécanisme permet d’éviter toute perte d’information critique liée aux capteurs.
+Dès le rétablissement de la connectivité, les données sont automatiquement synchronisées avec le backend.
+Cette synchronisation assure la cohérence et l’intégrité des informations du système.
+Ainsi, le mode autonome renforce la robustesse et la fiabilité de l’architecture globale.
 
-\subsection{Grands modèles de langage (LLM)}
-Les LLM (GPT, Gemini, etc.) sont des Transformers de type décodeur entraînés sur des masses de texte. Ils excellent en raisonnement et en génération de texte, mais sont \textbf{aveugles} : ils ne peuvent analyser une image. Pour le diagnostic agricole, ils doivent être combinés à un encodeur visuel.
-
-\subsection{Modèles vision-langage (VLM)}
-Un VLM associe trois composants : (1) un encodeur visuel (souvent un Vision Transformer), (2) un module d'alignement (projecteur ou Q-Former), (3) un LLM qui reçoit à la fois les tokens visuels et la question textuelle. Le tableau~\ref{tab:vlm_models} résume l'évolution récente.
-
-\begin{table}[htbp]
+\begin{figure}
 	\centering
-	\small
-	\begin{tabularx}{\textwidth}{|l|c|Y|}
-		\hline
-		\rowcolor[HTML]{2C3E50}
-		\textcolor{white}{\textbf{Modèle}} & \textcolor{white}{\textbf{Année}} & \textcolor{white}{\textbf{Innovation}} \\ \hline
-		CLIP~\cite{radford2021learning} & 2021 & Apprentissage contrastif image-texte. \\
-		BLIP-2~\cite{li2023blip2} & 2023 & Q-Former pour aligner vision et langage. \\
-		LLaVA~\cite{liu2023llava} & 2023 & Projection linéaire + réglage par instructions. \\
-		InstructBLIP~\cite{dai2023instructblip} & 2023 & Conditionnement du Q-Former par la question. \\
-		\textbf{PaliGemma}~\cite{beyer2024paligemma} & 2024 & Architecture unifiée SigLIP + Gemma 2B. \\ \hline
-	\end{tabularx}
-	\caption{Évolution des modèles vision-langage}
-	\label{tab:vlm_models}
-\end{table}
-
-La \textbf{question-réponse visuelle (VQA)} concrétise l'usage des VLM : l'utilisateur interroge le système en langage naturel, et le modèle répond en décrivant les symptômes (figure~\ref{fig:vqa-architecture}). Les VQA offrent une interaction guidée et une explicabilité, mais souffrent encore d'hallucinations, d'une forte dépendance au cloud, et d'une sensibilité aux conditions de prise de vue.
-
-\begin{figure}[tbph]
-	\centering
-	\includegraphics[width=0.7\linewidth]{public/vqa-architecture}
-	\caption{Architecture fonctionnelle d'un système VQA.}
-	\label{fig:vqa-architecture}
+	\includegraphics[width=0.7\linewidth]{public/workflowiot}
+	\caption{Flux des communications entre les composants IoT}
+	\label{fig:workflowiot}
 \end{figure}
 
-\begin{figure}[tbph]
+\subsubsection{Mise à jour à distance du contrôleur (OTA via ThingsBoard)}
+\label{subsec:ota_thingsboard}
+%----------------------------------------------------------------
+
+Le logiciel embarqué n’étant pas figé, le système doit pouvoir évoluer à distance de manière fiable, sécurisée et sans intervention physique sur la serre. Cette capacité de mise à jour  est assurée par la plateforme IoT \textbf{ThingsBoard}, qui permet la gestion centralisée du cycle de vie des logiciels déployés sur les contrôleurs.
+
+Le mécanisme OTA garantit le déploiement des nouvelles versions du firmware ainsi que des correctifs de sécurité sans interruption prolongée du service. Il assure également l’intégrité des mises à jour grâce à des vérifications avant installation, réduisant ainsi les risques de corruption ou d’incompatibilité.
+Ce processus renforce la maintenabilité du système et facilite son évolution continue dans un environnement de production.
+\subsubsection{Principe général}
+
+Chaque contrôleur est enregistré comme un \textit{device} au sein de la plateforme ThingsBoard dès sa mise en service. Pour chaque dispositif, la plateforme conserve des informations essentielles telles que le type de contrôleur ainsi que la version courante du logiciel embarqué et du micrologiciel.
+
+Le processus de mise à jour est entièrement orchestré par ThingsBoard. Il comprend les étapes suivantes : publication de la nouvelle version, notification du contrôleur concerné, transfert sécurisé du paquet de mise à jour, vérification de l’intégrité des fichiers, application locale, puis remontée du statut d’installation vers la plateforme.
+
+Dans cette architecture, l’agent de déploiement exécuté sur le Raspberry~Pi~4 joue le rôle d’intermédiaire entre ThingsBoard et les composants embarqués. Il reçoit les instructions OTA et déclenche localement la mise à jour du composant principal, à savoir le logiciel du Raspberry~Pi ainsi que le micrologiciel de l’Arduino.
+
+La figure~\ref{fig:ota_flow} illustre l’ensemble du processus de mise à jour OTA, depuis l’envoi de la nouvelle version par la plateforme ThingsBoard jusqu’à son déploiement effectif sur les contrôleurs embarqués.
+
+\begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{public/paligemma_arch}
-	\caption{Architecture de PaliGemma (SigLIP + Gemma).}
-	\label{fig:paligemmaarch}
+	\includegraphics[width=0.9\linewidth]{public/OTAfLOW.JPEG}
+	\caption{Diagramme de séquence du processus de mise à jour OTA via ThingsBoard}
+	\label{fig:ota_flow}
 \end{figure}
 
-% ============================================================
+\subsubsection{Chaîne de production des mises à jour (CI/CD)}
 
-% ============================================================
-\section{Apprentissage adaptatif et dynamique}
-\label{sec:adaptive_dynamic}
+Afin d’automatiser la génération, la validation et la publication des différentes composantes logicielles du système, deux pipelines CI/CD distincts ont été mis en place : l’un dédié au logiciel exécuté sur le Raspberry~Pi et aux services associés, et l’autre consacré au firmware embarqué de l’Arduino.
 
-L’agriculture de précision impose des modèles capables de s’adapter à des conditions changeantes (nouvelles maladies, variétés de plantes, environnements) tout en restant robustes et explicables. Cette section explore les techniques d’apprentissage qui permettent cette adaptabilité : les méthodes ensemblistes, l’apprentissage avec peu d’exemples (few-shot) et avec zéro exemple (zero-shot), ainsi que la sélection dynamique d’ensemble.
+Le déclenchement de ces pipelines repose sur un mécanisme de \textbf{webhook}. À chaque \textit{push} sur le dépôt Git, un événement est automatiquement émis et déclenche l’exécution du pipeline correspondant, sans intervention manuelle.
 
-\subsection{Apprentissage par ensembles}
-Les méthodes d’ensemble classiques, comme le \textit{bagging} (forêts aléatoires) ou le \textit{boosting} (AdaBoost, XGBoost), combinent plusieurs classifieurs pour réduire la variance et le biais. Appliquées aux réseaux de neurones, elles améliorent la robustesse : un ensemble de CNN peut surpasser n’importe lequel de ses membres pris isolément~\cite{dietterich2000ensemble}. Cependant, ces approches restent \textbf{statiques} : la combinaison des modèles est figée une fois l’entraînement terminé. Or, un modèle peut exceller sur certaines régions de l’espace des caractéristiques et être médiocre sur d’autres.
+\paragraph{Pipeline logiciel Raspberry Pi}
 
-\subsection{Apprentissage avec peu d’exemples (few-shot)}
-En environnement agricole réel, il est fréquent de devoir identifier une nouvelle maladie ou une variété végétale pour laquelle on ne dispose que de très peu d’images (parfois moins d’une dizaine). L’\textbf{apprentissage avec peu d’exemples} (few-shot learning) répond à ce besoin. Le \textbf{méta-apprentissage} (\textit{learning to learn}) en est une approche phare : l’algorithme MAML~\cite{finn2017model} apprend une initialisation des paramètres telle qu’une ou deux étapes de descente de gradient suffisent à adapter le modèle à une nouvelle tâche avec très peu de données. Cette capacité est cruciale pour un système comme HydroNova, qui doit pouvoir évoluer avec l’apparition de nouveaux pathogènes. D'autres approches comme \textit{Prototypical Networks}~\cite{snell2017prototypical} ou \textit{Relation Networks}~\cite{sung2018learning} sont également utilisées en agriculture~\cite{arguello2020few}.
+Le premier pipeline est responsable de la production des artefacts logiciels destinés au Raspberry~Pi. Comme illustré à la figure~\ref{fig:raspberry_pi_pipeline}, ce processus comprend plusieurs étapes automatisées :
 
-\subsection{Apprentissage avec zéro exemple (zero-shot)}
-Dans certains cas, aucune image de la nouvelle maladie n’est disponible au moment de l’entraînement. L’\textbf{apprentissage avec zéro exemple} (zero-shot learning) exploite des descriptions sémantiques (textuelles) des classes cibles. Les modèles vision-langage (VLM) comme CLIP~\cite{radford2021learning} ou PaliGemma sont naturellement adaptés au zero-shot : ils comparent l’image à une description textuelle de la maladie (par exemple, \textit{« taches brunes entourées d’un halo jaune sur feuilles de tomate »}) sans avoir jamais vu d’exemple visuel de cette pathologie. Cette approche est particulièrement pertinente pour les émergences phytosanitaires rapides~\cite{li2020zero}.
-
-\subsection{Sélection dynamique d’ensemble (DES)}
-Pour pallier le caractère statique des ensembles classiques, la \textbf{sélection dynamique d’ensemble} (DES) choisit, pour chaque image à classer, les modèles les plus compétents localement. Le framework \textbf{META-DES}~\cite{cruz2018meta} procède ainsi :
 \begin{enumerate}
-	\item Définition d’un voisinage de l’image cible (ses plus proches voisins dans un ensemble de validation).
-	\item Extraction de \textit{méta-caractéristiques} pour chaque modèle candidat (précision locale, niveau de confiance, etc.).
-	\item Prédiction par un méta-classifieur de la compétence du modèle pour cette image.
-	\item Vote pondéré des seuls modèles jugés compétents.
+	\item vérification de la cohérence et de la qualité du code source ;
+	\item exécution des tests unitaires et d’intégration ;
+	\item compilation de l’application pour l’architecture cible ;
+	\item génération des métadonnées de version ;
+	\item publication des artefacts dans un dépôt de stockage dédié.
 \end{enumerate}
-Cette approche améliore significativement la précision et la robustesse, particulièrement utile en milieu agricole où les conditions d’acquisition (éclairage, angle, chevauchement) varient fortement. Des travaux récents l'appliquent au diagnostic de maladies des plantes~\cite{zhang2020dynamic}.
 
-\subsection{Pertinence dans le contexte agricole}
-L’apprentissage adaptatif et dynamique répond à plusieurs contraintes du projet HydroNova :
-\begin{itemize}
-	\item \textbf{Évolutivité} : l’apparition de nouvelles maladies ou de nouvelles variétés de plantes peut être prise en compte via le few-shot ou le zero-shot, sans réentraînement complet.
-	\item \textbf{Robustesse aux variations} : la sélection dynamique d’ensemble permet de s’adapter localement à des conditions de terrain changeantes.
-	\item \textbf{Hybridation Edge/Cloud} : le few-shot et le zero-shot peuvent être déployés en cloud (via VLM), tandis que la sélection dynamique d’ensemble peut être embarquée sur le Raspberry Pi pour une inférence rapide hors-ligne.
-\end{itemize}
-Ces techniques complètent ainsi naturellement l’architecture hybride proposée : le module embarqué repose sur un ensemble dynamique de CNN (DES), tandis que le module cloud exploite un VLM capable de zero-shot et de few-shot.
+Les exécutables générés sont ensuite utilisés pour le déploiement sur les contrôleurs Raspberry~Pi du système.
 
-% ============================================================
-\section{Synthèse critique et positionnement}
-\label{sec:synthese}
-
-Le tableau~\ref{tab:synthese} compare les différentes familles de modèles selon des critères opérationnels.
-
-\begin{table}[htbp]
+\begin{figure}[!htbp]
 	\centering
-	\small
-	\begin{tabularx}{\textwidth}{|l|X|X|c|c|}
-		\hline
-		\rowcolor[HTML]{2C3E50}
-		\textcolor{white}{\textbf{Approche}} & \textcolor{white}{\textbf{Apports}} & \textcolor{white}{\textbf{Limites}} & \textcolor{white}{\textbf{Offline}} & \textcolor{white}{\textbf{Explicabilité}} \\ \hline
-		CNN classiques & Efficaces, légers & Fragiles, boîtes noires & Oui & Faible \\
-		Ensembles de CNN & Robustesse & Complexité & Oui & Faible/Moyenne \\
-		Vision Transformers & Modélisation globale & Gourmands & Partiel & Moyenne \\
-		LLM & Raisonnement, texte & Aveugles & Non & Élevée \\
-		VLM / VQA & Multimodal, explicatif & Hallucinations, dépendance cloud & Non & Élevée \\
-		Few-shot / Zero-shot & Adaptabilité rapide & Nécessite un pré-entraînement adapté & Partiel & Moyenne/Élevée \\
-		DES (sélection dynamique) & Robustesse locale & Coût de calcul supplémentaire & Oui & Moyenne \\ \hline
-	\end{tabularx}
-	\caption{Synthèse comparative des paradigmes d'IA pour le diagnostic agricole}
-	\label{tab:synthese}
-\end{table}
+	\includegraphics[width=0.9\linewidth]{public/rasberrypiPipe}
+	\caption{Pipeline CI/CD du logiciel embarqué sur Raspberry Pi déclenché par webhook}
+	\label{fig:raspberry_pi_pipeline}
+\end{figure}
 
-Aucune approche unique ne satisfait toutes les contraintes du projet HydroNova : besoin d'un fonctionnement hors-ligne (serres isolées), de robustesse aux conditions réelles, d'évolutivité face à de nouvelles maladies, et d'explicabilité pour l'utilisateur.
+\paragraph{Pipeline firmware Arduino}
 
-C'est pourquoi nous proposons une \textbf{architecture hybride} articulant deux branches complémentaires :
+Le second pipeline est dédié au firmware embarqué exécuté sur l’Arduino. Comme illustré à la figure~\ref{fig:arduino_pipeline}, il assure la génération automatisée et reproductible du micrologiciel.
 
-\begin{itemize}
-	\item Une branche \textbf{Edge} (embarquée sur Raspberry Pi) basée sur un ensemble dynamique de CNN (META-DES) pour une classification robuste, rapide et hors-ligne.
-	\item Une branche \textbf{Cloud} exploitant un VLM (PaliGemma) pour l'assistance interactive, la génération d'explications, les cas ambigus, ainsi que l'adaptation en cas d'absence d'exemples.
-\end{itemize}
+Après validation du code source, les étapes suivantes sont exécutées :
 
-Cette hybridation permet de concilier performance, résilience, adaptabilité et richesse sémantique.
+\begin{enumerate}
+	\item installation automatique des dépendances de compilation ;
+	\item compilation du firmware Arduino ;
+	\item génération du fichier binaire \texttt{.hex} ;
+	\item publication de l’artefact compilé dans le dépôt de versions.
+\end{enumerate}
 
+Cette automatisation garantit que chaque version du firmware est reproductible et directement exploitable pour le déploiement sur les cartes Arduino.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{public/arduinoPipe.png}
+	\caption{Pipeline CI/CD du firmware Arduino déclenché par webhook}
+	\label{fig:arduino_pipeline}
+\end{figure}
+
+
+L’utilisation de deux pipelines indépendants permet d’adapter les étapes de construction aux contraintes spécifiques de chaque plateforme, tout en conservant un processus homogène de validation, de versionnement et de publication des artefacts logiciels. Cette approche renforce la fiabilité du cycle de développement et facilite le déploiement continu du système.
 % ============================================================
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-Ce chapitre a présenté un panorama des principales architectures d'intelligence artificielle pour l'agriculture : CNN, Transformers, VLM, ainsi que les techniques d'apprentissage adaptatif et dynamique (ensembles, few-shot, zero-shot, sélection dynamique). L'analyse montre qu'aucun modèle isolé n'est suffisant, ce qui justifie l'approche hybride d'HydroNova. Le chapitre suivant détaille l'analyse des besoins et la spécification fonctionnelle du système.
+Les architectures d’intelligence artificielle appliquées à l’agriculture regroupent plusieurs approches complémentaires, notamment les CNN, les Transformers et les modèles visuels-langagiers (VLM), auxquelles s’ajoutent des méthodes d’apprentissage adaptatif telles que le few-shot et le zero-shot learning.
+
+L’analyse de ces approches met en évidence leurs limites lorsqu’elles sont utilisées isolément dans des environnements agricoles complexes et variables. Cela justifie l’adoption d’une approche hybride dans le système HydroNova afin d’améliorer la robustesse, la généralisation et la stabilité des performances.
+
+L’architecture du système a ainsi été structurée de manière modulaire autour de trois composants principaux : un moteur d’intelligence artificielle, un module de stabilité opérationnelle et un chatbot intelligent dédié à l’interaction utilisateur.
+
+Cette organisation permet d’assurer la performance globale et la flexibilité du système. Le chapitre suivant présente la phase de réalisation et l’implémentation des différents composants.
