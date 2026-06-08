@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.14)  8 JUN 2026 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.14)  8 JUN 2026 01:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,27 +1234,10 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 Package babel Info: 'french' activates 'french' shorthands.
 (babel)             Reported on input line 12.
 
-(introduction.aux) (Chapitre1.aux) (Chapitre2.aux) (Chapitre3.aux
-
-LaTeX Warning: Label `tab:cnn_archi' multiply defined.
-
-
-LaTeX Warning: Label `fig:architecture-of-the-inceptionv3' multiply defined.
-
-
-LaTeX Warning: Label `fig:ResNet-architecture' multiply defined.
-
-
-LaTeX Warning: Label `fig:architecture-of-the-convnext' multiply defined.
-
-
-LaTeX Warning: Label `sec:transformer_vlm' multiply defined.
-
+(introduction.aux) (Chapitre1.aux) (Chapitre2.aux) (Chapitre3.aux)
+(Chapitre4.aux
 
 LaTeX Warning: Label `tab:vlm_models' multiply defined.
-
-
-LaTeX Warning: Label `sec:adaptive_dynamic' multiply defined.
 
 
 LaTeX Warning: Label `fig:vqa-architecture' multiply defined.
@@ -1263,12 +1246,15 @@ LaTeX Warning: Label `fig:vqa-architecture' multiply defined.
 LaTeX Warning: Label `fig:paligemmaarch' multiply defined.
 
 
+LaTeX Warning: Label `sec:adaptive_dynamic' multiply defined.
+
+
 LaTeX Warning: Label `sec:synthese' multiply defined.
 
 
 LaTeX Warning: Label `tab:synthese' multiply defined.
 
-) (Chapitre4.aux) (Chapitre5.aux
+) (Chapitre5.aux
 
 LaTeX Warning: Label `tab:cnn_archi' multiply defined.
 
@@ -1451,7 +1437,7 @@ Package hyperref Info: Link coloring OFF on input line 5.
 \@outlinefile=\write4
 \openout4 = `main3.out'.
 
-<public/isetlogo.png, id=385, 155.83218pt x 183.68625pt>
+<public/isetlogo.png, id=389, 155.83218pt x 183.68625pt>
 File: public/isetlogo.png Graphic file (type png)
 <use public/isetlogo.png>
 Package pdftex.def Info: public/isetlogo.png  used on input line 20.
@@ -1501,7 +1487,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
-<public/logosociete.jpeg, id=386, 1027.84pt x 1027.84pt>
+<public/logosociete.jpeg, id=390, 1027.84pt x 1027.84pt>
 File: public/logosociete.jpeg Graphic file (type jpg)
 <use public/logosociete.jpeg>
 Package pdftex.def Info: public/logosociete.jpeg  used on input line 26.
@@ -1586,7 +1572,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
  []
 
 [8]
-<public/AgroSelf.png, id=645, 1284.8pt x 1027.84pt>
+<public/AgroSelf.png, id=654, 1284.8pt x 1027.84pt>
 File: public/AgroSelf.png Graphic file (type png)
 <use public/AgroSelf.png>
 Package pdftex.def Info: public/AgroSelf.png  used on input line 134.
@@ -1595,12 +1581,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-<public/grow.png, id=647, 351.3125pt x 120.45pt>
+<public/grow.png, id=656, 351.3125pt x 120.45pt>
 File: public/grow.png Graphic file (type png)
 <use public/grow.png>
 Package pdftex.def Info: public/grow.png  used on input line 146.
 (pdftex.def)             Requested size: 53.51726pt x 18.34792pt.
-<public/biolo.png, id=648, 198.7425pt x 60.97781pt>
+<public/biolo.png, id=657, 198.7425pt x 60.97781pt>
 File: public/biolo.png Graphic file (type png)
 <use public/biolo.png>
 Package pdftex.def Info: public/biolo.png  used on input line 158.
@@ -1697,13 +1683,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
 [9 <./public/AgroSelf.png> <./public/grow.png> <./public/biolo.png>] [10]
 [11]
-<public/crispdm.png, id=668, 705.38531pt x 609.02531pt>
+<public/crispdm.png, id=677, 705.38531pt x 609.02531pt>
 File: public/crispdm.png Graphic file (type png)
 <use public/crispdm.png>
 Package pdftex.def Info: public/crispdm.png  used on input line 261.
 (pdftex.def)             Requested size: 281.68515pt x 243.2062pt.
  [12 <./public/crispdm.png>]
-<public/methaoly.png, id=677, 1388.18625pt x 770.88pt>
+<public/methaoly.png, id=686, 1388.18625pt x 770.88pt>
 File: public/methaoly.png Graphic file (type png)
 <use public/methaoly.png>
 Package pdftex.def Info: public/methaoly.png  used on input line 308.
@@ -1724,13 +1710,13 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 
 
 ]
-<public/Architecture-of-the-InceptionV3.png, id=727, 853.1875pt x 258.9675pt>
+<public/Architecture-of-the-InceptionV3.png, id=736, 853.1875pt x 258.9675pt>
 File: public/Architecture-of-the-InceptionV3.png Graphic file (type png)
 <use public/Architecture-of-the-InceptionV3.png>
 Package pdftex.def Info: public/Architecture-of-the-InceptionV3.png  used on in
 put line 56.
 (pdftex.def)             Requested size: 328.6279pt x 99.74823pt.
-<public/resnetArchi.png, id=728, 853.1875pt x 488.82625pt>
+<public/resnetArchi.png, id=737, 853.1875pt x 488.82625pt>
 File: public/resnetArchi.png Graphic file (type png)
 <use public/resnetArchi.png>
 Package pdftex.def Info: public/resnetArchi.png  used on input line 63.
@@ -1739,7 +1725,7 @@ Package pdftex.def Info: public/resnetArchi.png  used on input line 63.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<public/Architecture-of-the-ConvNeXt.png, id=729, 452.892pt x 192.72pt>
+<public/Architecture-of-the-ConvNeXt.png, id=738, 452.892pt x 192.72pt>
 File: public/Architecture-of-the-ConvNeXt.png Graphic file (type png)
 <use public/Architecture-of-the-ConvNeXt.png>
 Package pdftex.def Info: public/Architecture-of-the-ConvNeXt.png  used on input
@@ -1750,12 +1736,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <./public/Architecture-of-the-InceptionV3.png>] [18 <./public/resnetArchi.p
 ng> <./public/Architecture-of-the-ConvNeXt.png>]
-<public/vqa-architecture.png, id=778, 475.7775pt x 375.4025pt>
+<public/vqa-architecture.png, id=787, 475.7775pt x 375.4025pt>
 File: public/vqa-architecture.png Graphic file (type png)
 <use public/vqa-architecture.png>
 Package pdftex.def Info: public/vqa-architecture.png  used on input line 121.
 (pdftex.def)             Requested size: 328.6279pt x 259.30869pt.
-<public/paligemma_arch.png, id=779, 1445.4pt x 813.0375pt>
+<public/paligemma_arch.png, id=788, 1445.4pt x 813.0375pt>
 File: public/paligemma_arch.png Graphic file (type png)
 <use public/paligemma_arch.png>
 Package pdftex.def Info: public/paligemma_arch.png  used on input line 128.
@@ -1770,117 +1756,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
  (Chapitre3.tex
 Chapitre III.
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 7.
-
-[24
+) [24
 
 
 
 
 ]
-File: public/Architecture-of-the-InceptionV3.png Graphic file (type png)
-<use public/Architecture-of-the-InceptionV3.png>
-Package pdftex.def Info: public/Architecture-of-the-InceptionV3.png  used on in
-put line 59.
-(pdftex.def)             Requested size: 328.6279pt x 99.74823pt.
-File: public/resnetArchi.png Graphic file (type png)
-<use public/resnetArchi.png>
-Package pdftex.def Info: public/resnetArchi.png  used on input line 66.
-(pdftex.def)             Requested size: 328.6279pt x 188.28445pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: public/Architecture-of-the-ConvNeXt.png Graphic file (type png)
-<use public/Architecture-of-the-ConvNeXt.png>
-Package pdftex.def Info: public/Architecture-of-the-ConvNeXt.png  used on input
- line 73.
-(pdftex.def)             Requested size: 328.6279pt x 139.84633pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[25] [26]
-File: public/vqa-architecture.png Graphic file (type png)
-<use public/vqa-architecture.png>
-Package pdftex.def Info: public/vqa-architecture.png  used on input line 124.
-(pdftex.def)             Requested size: 328.6279pt x 259.30869pt.
-File: public/paligemma_arch.png Graphic file (type png)
-<use public/paligemma_arch.png>
-Package pdftex.def Info: public/paligemma_arch.png  used on input line 131.
-(pdftex.def)             Requested size: 328.6279pt x 184.84846pt.
- [27] [28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 192--192
-[]|\T1/ptm/m/n/10 (+20) Nécessite un pré-
- []
-
-) [30] [31]
 \openout2 = `Chapitre4.aux'.
 
- (Chapitre4.tex)
-\openout2 = `Chapitre5.aux'.
-
- (Chapitre5.tex
+ (Chapitre4.tex
 Chapitre IV.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 7.
 
-[32
+[25
 
 
 
 
+] [26]
+<public/4couche.png, id=852, 1084.05pt x 493.0922pt>
+File: public/4couche.png Graphic file (type png)
+<use public/4couche.png>
+Package pdftex.def Info: public/4couche.png  used on input line 48.
+(pdftex.def)             Requested size: 328.6279pt x 149.47873pt.
+<public/glob.png, id=854, 1038.88126pt x 566.115pt>
+File: public/glob.png Graphic file (type png)
+<use public/glob.png>
+Package pdftex.def Info: public/glob.png  used on input line 58.
+(pdftex.def)             Requested size: 445.99553pt x 243.03598pt.
+ [27 <./public/4couche.png> <./public/glob.png (PNG copy)>]
+<public/archi_IOTF.png, id=861, 847.968pt x 375.804pt>
+File: public/archi_IOTF.png Graphic file (type png)
+<use public/archi_IOTF.png>
+Package pdftex.def Info: public/archi_IOTF.png  used on input line 82.
+(pdftex.def)             Requested size: 375.57782pt x 166.44952pt.
+<public/cablage.jpeg, id=863, 4111.36pt x 1940.24875pt>
+File: public/cablage.jpeg Graphic file (type jpg)
+<use public/cablage.jpeg>
+Package pdftex.def Info: public/cablage.jpeg  used on input line 91.
+(pdftex.def)             Requested size: 328.6279pt x 155.07504pt.
 
 
+LaTeX Warning: Reference `subsec:ota_thingsboard' on page 28 undefined on input
+ line 99.
 
-]
-File: public/Architecture-of-the-InceptionV3.png Graphic file (type png)
-<use public/Architecture-of-the-InceptionV3.png>
-Package pdftex.def Info: public/Architecture-of-the-InceptionV3.png  used on in
-put line 56.
-(pdftex.def)             Requested size: 328.6279pt x 99.74823pt.
-File: public/resnetArchi.png Graphic file (type png)
-<use public/resnetArchi.png>
-Package pdftex.def Info: public/resnetArchi.png  used on input line 63.
-(pdftex.def)             Requested size: 328.6279pt x 188.28445pt.
+[28]
+<public/relationLogEmbeded.png, id=871, 829.29825pt x 462.528pt>
+File: public/relationLogEmbeded.png Graphic file (type png)
+<use public/relationLogEmbeded.png>
+Package pdftex.def Info: public/relationLogEmbeded.png  used on input line 107.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: public/Architecture-of-the-ConvNeXt.png Graphic file (type png)
-<use public/Architecture-of-the-ConvNeXt.png>
-Package pdftex.def Info: public/Architecture-of-the-ConvNeXt.png  used on input
- line 70.
-(pdftex.def)             Requested size: 328.6279pt x 139.84633pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[33] [34]
+(pdftex.def)             Requested size: 328.6279pt x 183.28586pt.
+ [29 <./public/archi_IOTF.png> <./public/cablage.jpeg>]
+<public/raspiArchiDiagFR.png, id=877, 915.42pt x 759.83875pt>
+File: public/raspiArchiDiagFR.png Graphic file (type png)
+<use public/raspiArchiDiagFR.png>
+Package pdftex.def Info: public/raspiArchiDiagFR.png  used on input line 116.
+(pdftex.def)             Requested size: 422.52057pt x 350.71266pt.
+ [30 <./public/relationLogEmbeded.png> <./public/raspiArchiDiagFR.png>]
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 134.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.36008> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [31] [32]
 File: public/vqa-architecture.png Graphic file (type png)
 <use public/vqa-architecture.png>
-Package pdftex.def Info: public/vqa-architecture.png  used on input line 121.
+Package pdftex.def Info: public/vqa-architecture.png  used on input line 209.
 (pdftex.def)             Requested size: 328.6279pt x 259.30869pt.
 File: public/paligemma_arch.png Graphic file (type png)
 <use public/paligemma_arch.png>
-Package pdftex.def Info: public/paligemma_arch.png  used on input line 128.
+Package pdftex.def Info: public/paligemma_arch.png  used on input line 216.
 (pdftex.def)             Requested size: 328.6279pt x 184.84846pt.
- [35] [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
+ [33] [34]
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
 []|\T1/ptm/m/n/10 (+20) Nécessite un pré-
  []
 
-) [38] [39]
-\openout2 = `Chapitre6.aux'.
+) [36]
+\openout2 = `Chapitre5.aux'.
 
- (Chapitre6.tex
+ (Chapitre5.tex
 Chapitre V.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 7.
 
-[40
+[37
 
 
 
@@ -1907,7 +1878,7 @@ Package pdftex.def Info: public/Architecture-of-the-ConvNeXt.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41] [42]
+[38] [39]
 File: public/vqa-architecture.png Graphic file (type png)
 <use public/vqa-architecture.png>
 Package pdftex.def Info: public/vqa-architecture.png  used on input line 121.
@@ -1916,17 +1887,67 @@ File: public/paligemma_arch.png Graphic file (type png)
 <use public/paligemma_arch.png>
 Package pdftex.def Info: public/paligemma_arch.png  used on input line 128.
 (pdftex.def)             Requested size: 328.6279pt x 184.84846pt.
- [43] [44] [45]
+ [40] [41] [42]
 Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []|\T1/ptm/m/n/10 (+20) Nécessite un pré-
  []
 
-) [46] [47] (main3.bbl [48
+) [43] [44]
+\openout2 = `Chapitre6.aux'.
+
+ (Chapitre6.tex
+Chapitre VI.
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 7.
+
+[45
 
 
 
 
-] [49]) [50] (main3.aux (introduction.aux)
+]
+File: public/Architecture-of-the-InceptionV3.png Graphic file (type png)
+<use public/Architecture-of-the-InceptionV3.png>
+Package pdftex.def Info: public/Architecture-of-the-InceptionV3.png  used on in
+put line 56.
+(pdftex.def)             Requested size: 328.6279pt x 99.74823pt.
+File: public/resnetArchi.png Graphic file (type png)
+<use public/resnetArchi.png>
+Package pdftex.def Info: public/resnetArchi.png  used on input line 63.
+(pdftex.def)             Requested size: 328.6279pt x 188.28445pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: public/Architecture-of-the-ConvNeXt.png Graphic file (type png)
+<use public/Architecture-of-the-ConvNeXt.png>
+Package pdftex.def Info: public/Architecture-of-the-ConvNeXt.png  used on input
+ line 70.
+(pdftex.def)             Requested size: 328.6279pt x 139.84633pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46] [47]
+File: public/vqa-architecture.png Graphic file (type png)
+<use public/vqa-architecture.png>
+Package pdftex.def Info: public/vqa-architecture.png  used on input line 121.
+(pdftex.def)             Requested size: 328.6279pt x 259.30869pt.
+File: public/paligemma_arch.png Graphic file (type png)
+<use public/paligemma_arch.png>
+Package pdftex.def Info: public/paligemma_arch.png  used on input line 128.
+(pdftex.def)             Requested size: 328.6279pt x 184.84846pt.
+ [48] [49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+[]|\T1/ptm/m/n/10 (+20) Nécessite un pré-
+ []
+
+) [51] [52] (main3.bbl [53
+
+
+
+
+] [54]) [55] (main3.aux (introduction.aux)
 (Chapitre1.aux) (Chapitre2.aux) (Chapitre3.aux) (Chapitre4.aux) (Chapitre5.aux)
 (Chapitre6.aux))
  ***********
@@ -1941,22 +1962,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main3.out' has not changed.
-(rerunfilecheck)             Checksum: 0EEC2C50A19322A4392D919899D79978;21819.
+(rerunfilecheck)             Checksum: 8BE773F96F9E6C641E1B75235843A9F7;21675.
  ) 
 Here is how much of TeX's memory you used:
- 47241 strings out of 467871
- 1065213 string characters out of 5428443
- 1639651 words of memory out of 5000000
- 74493 multiletter control sequences out of 15000+600000
- 743922 words of font info for 477 fonts, out of 8000000 for 9000
+ 47436 strings out of 467871
+ 1069070 string characters out of 5428443
+ 1640266 words of memory out of 5000000
+ 74630 multiletter control sequences out of 15000+600000
+ 757532 words of font info for 532 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,108p,1011b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/M
-iKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main3.pdf (63 pages, 2809325 bytes).
+ 99i,13n,108p,1030b,818s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\waelh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/
+fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/time
+s/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main3.pdf (68 pages, 6956191 bytes).
 PDF statistics:
- 1222 PDF objects out of 1440 (max. 8388607)
- 251 named destinations out of 1000 (max. 500000)
- 129857 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 1281 PDF objects out of 1440 (max. 8388607)
+ 259 named destinations out of 1000 (max. 500000)
+ 144231 words of extra memory for PDF output out of 154059 (max. 10000000)
 

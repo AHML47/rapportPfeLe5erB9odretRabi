@@ -12,21 +12,25 @@
 \contentsline {figure}{\numberline {II.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{20}{figure.caption.17}%
 \contentsline {figure}{\numberline {II.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{20}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {III.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{25}{figure.caption.22}%
-\contentsline {figure}{\numberline {III.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{26}{figure.caption.23}%
-\contentsline {figure}{\numberline {III.3}{\ignorespaces Architecture de ConvNeXt.}}{26}{figure.caption.24}%
-\contentsline {figure}{\numberline {III.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{28}{figure.caption.26}%
-\contentsline {figure}{\numberline {III.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{28}{figure.caption.27}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {IV.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{33}{figure.caption.31}%
-\contentsline {figure}{\numberline {IV.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{34}{figure.caption.32}%
-\contentsline {figure}{\numberline {IV.3}{\ignorespaces Architecture de ConvNeXt.}}{34}{figure.caption.33}%
-\contentsline {figure}{\numberline {IV.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{36}{figure.caption.35}%
-\contentsline {figure}{\numberline {IV.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{36}{figure.caption.36}%
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces Modèle IoT en 4 couches}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces Architecture globale du système en quatre couches fonctionnelles}}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces Architecture globale du système IoT de la serre intelligente}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Schéma détaillé du câblage des capteurs et actionneurs avec le microcontrôleur}}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Relation entre le composant principal et le service de déploiement ThingsBoard}}{30}{figure.caption.25}%
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Architecture logicielle embarquée au sein du système}}{30}{figure.caption.26}%
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{34}{figure.caption.29}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {V.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{41}{figure.caption.40}%
-\contentsline {figure}{\numberline {V.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{42}{figure.caption.41}%
-\contentsline {figure}{\numberline {V.3}{\ignorespaces Architecture de ConvNeXt.}}{42}{figure.caption.42}%
-\contentsline {figure}{\numberline {V.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{44}{figure.caption.44}%
-\contentsline {figure}{\numberline {V.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{44}{figure.caption.45}%
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{38}{figure.caption.33}%
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{39}{figure.caption.34}%
+\contentsline {figure}{\numberline {V.3}{\ignorespaces Architecture de ConvNeXt.}}{39}{figure.caption.35}%
+\contentsline {figure}{\numberline {V.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{41}{figure.caption.37}%
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{41}{figure.caption.38}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {VI.1}{\ignorespaces Architecture d'InceptionV3 avec ses blocs parallèles.}}{46}{figure.caption.42}%
+\contentsline {figure}{\numberline {VI.2}{\ignorespaces Architecture de ResNet (connexions résiduelles).}}{47}{figure.caption.43}%
+\contentsline {figure}{\numberline {VI.3}{\ignorespaces Architecture de ConvNeXt.}}{47}{figure.caption.44}%
+\contentsline {figure}{\numberline {VI.4}{\ignorespaces Architecture fonctionnelle d'un système VQA.}}{49}{figure.caption.46}%
+\contentsline {figure}{\numberline {VI.5}{\ignorespaces Architecture de PaliGemma (SigLIP + Gemma).}}{49}{figure.caption.47}%
 \contentsfinish 
