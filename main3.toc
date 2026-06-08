@@ -1,0 +1,100 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{Liste des Acronymes}{xiii}{chapter*.3}%
+\contentsline {chapter}{Introduction Générale}{1}{chapter*.4}%
+\contentsline {chapter}{\numberline {I}Cadre Général du Projet}{3}{chapter.1}%
+\contentsline {section}{Introduction}{3}{section*.5}%
+\contentsline {section}{\numberline {I}Présentation de l'organisme d'accueil}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {I.1}Profil de l'entreprise et vision stratégique}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {I.2}Piliers technologiques centraux}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {I.3}Dynamique Organisationnelle et R\&D}{4}{subsection.1.1.3}%
+\contentsline {section}{\numberline {II}Contexte général du projet}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {II.1}Agriculture intelligente et Agriculture 4.0}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {II.2}Hydroponie et production de fourrage}{5}{subsection.1.2.2}%
+\contentsline {section}{\numberline {III}Présentation du problème}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {III.1}Défis agricoles}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {III.2}Défis technologiques}{7}{subsection.1.3.2}%
+\contentsline {section}{\numberline {IV}Étude de l’existant}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {IV.1}Solutions existantes}{8}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {IV.2}Limites des solutions existantes}{9}{subsection.1.4.2}%
+\contentsline {section}{\numberline {V} Solution Proposée}{9}{section.1.5}%
+\contentsline {section}{\numberline {VI}Méthodologie de gestion de projet}{11}{section.1.6}%
+\contentsline {subsection}{\numberline {VI.1}Présentation synthétique des méthodes retenues}{12}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {VI.2}Hybridation au sein du modèle en V}{13}{subsection.1.6.2}%
+\contentsline {section}{Conclusion}{14}{table.caption.10}%
+\contentsline {chapter}{\numberline {II}ÉTAT DE L'ART : APPROCHES INTELLIGENTES EN AGRICULTURE}{16}{chapter.2}%
+\contentsline {section}{Introduction}{16}{section*.11}%
+\contentsline {section}{\numberline {I}Réseaux de neurones convolutifs (CNN)}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {I.1}Principe général}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {I.2}Évolution des architectures CNN}{17}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {I.3}Limites des CNN pour le diagnostic agricole}{18}{subsection.2.1.3}%
+\contentsline {section}{\numberline {II}Transformers et modèles vision-langage}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {II.1}Le mécanisme d'attention et les Transformers}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {II.2}Grands modèles de langage (LLM)}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {II.3}Modèles vision-langage (VLM)}{19}{subsection.2.2.3}%
+\contentsline {section}{\numberline {III}Apprentissage adaptatif et dynamique}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {III.1}Apprentissage par ensembles}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {III.2}Apprentissage avec peu d’exemples (few-shot)}{21}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {III.3}Apprentissage avec zéro exemple (zero-shot)}{21}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {III.4}Sélection dynamique d’ensemble (DES)}{21}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {III.5}Pertinence dans le contexte agricole}{21}{subsection.2.3.5}%
+\contentsline {section}{\numberline {IV}Synthèse critique et positionnement}{22}{section.2.4}%
+\contentsline {section}{Conclusion}{23}{table.caption.19}%
+\contentsline {chapter}{\numberline {III}ARCHITECTURE ET CONCEPTION}{24}{chapter.3}%
+\contentsline {section}{Introduction}{24}{section*.20}%
+\contentsline {section}{\numberline {I}Vue d'Ensemble de l'Architecture Globale}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {I.1}Modèle de référence IoT à 4 couches}{25}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {I.2}Évolution des architectures CNN}{25}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {I.3}Limites des CNN pour le diagnostic agricole}{26}{subsection.3.1.3}%
+\contentsline {section}{\numberline {II}Transformers et modèles vision-langage}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {II.1}Le mécanisme d'attention et les Transformers}{27}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {II.2}Grands modèles de langage (LLM)}{27}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {II.3}Modèles vision-langage (VLM)}{27}{subsection.3.2.3}%
+\contentsline {section}{\numberline {III}Apprentissage adaptatif et dynamique}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {III.1}Apprentissage par ensembles}{28}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {III.2}Apprentissage avec peu d’exemples (few-shot)}{29}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {III.3}Apprentissage avec zéro exemple (zero-shot)}{29}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {III.4}Sélection dynamique d’ensemble (DES)}{29}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {III.5}Pertinence dans le contexte agricole}{29}{subsection.3.3.5}%
+\contentsline {section}{\numberline {IV}Synthèse critique et positionnement}{30}{section.3.4}%
+\contentsline {section}{Conclusion}{31}{table.caption.28}%
+\contentsline {chapter}{\numberline {IV}ÉTAT DE L'ART : APPROCHES INTELLIGENTES EN AGRICULTURE}{32}{chapter.4}%
+\contentsline {section}{Introduction}{32}{section*.29}%
+\contentsline {section}{\numberline {I}Réseaux de neurones convolutifs (CNN)}{33}{section.4.1}%
+\contentsline {subsection}{\numberline {I.1}Principe général}{33}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {I.2}Évolution des architectures CNN}{33}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {I.3}Limites des CNN pour le diagnostic agricole}{34}{subsection.4.1.3}%
+\contentsline {section}{\numberline {II}Transformers et modèles vision-langage}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {II.1}Le mécanisme d'attention et les Transformers}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {II.2}Grands modèles de langage (LLM)}{35}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {II.3}Modèles vision-langage (VLM)}{35}{subsection.4.2.3}%
+\contentsline {section}{\numberline {III}Apprentissage adaptatif et dynamique}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {III.1}Apprentissage par ensembles}{36}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {III.2}Apprentissage avec peu d’exemples (few-shot)}{37}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {III.3}Apprentissage avec zéro exemple (zero-shot)}{37}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {III.4}Sélection dynamique d’ensemble (DES)}{37}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {III.5}Pertinence dans le contexte agricole}{37}{subsection.4.3.5}%
+\contentsline {section}{\numberline {IV}Synthèse critique et positionnement}{38}{section.4.4}%
+\contentsline {section}{Conclusion}{39}{table.caption.37}%
+\contentsline {chapter}{\numberline {V}ÉTAT DE L'ART : APPROCHES INTELLIGENTES EN AGRICULTURE}{40}{chapter.5}%
+\contentsline {section}{Introduction}{40}{section*.38}%
+\contentsline {section}{\numberline {I}Réseaux de neurones convolutifs (CNN)}{41}{section.5.1}%
+\contentsline {subsection}{\numberline {I.1}Principe général}{41}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {I.2}Évolution des architectures CNN}{41}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {I.3}Limites des CNN pour le diagnostic agricole}{42}{subsection.5.1.3}%
+\contentsline {section}{\numberline {II}Transformers et modèles vision-langage}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {II.1}Le mécanisme d'attention et les Transformers}{43}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {II.2}Grands modèles de langage (LLM)}{43}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {II.3}Modèles vision-langage (VLM)}{43}{subsection.5.2.3}%
+\contentsline {section}{\numberline {III}Apprentissage adaptatif et dynamique}{43}{section.5.3}%
+\contentsline {subsection}{\numberline {III.1}Apprentissage par ensembles}{44}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {III.2}Apprentissage avec peu d’exemples (few-shot)}{45}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {III.3}Apprentissage avec zéro exemple (zero-shot)}{45}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {III.4}Sélection dynamique d’ensemble (DES)}{45}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {III.5}Pertinence dans le contexte agricole}{45}{subsection.5.3.5}%
+\contentsline {section}{\numberline {IV}Synthèse critique et positionnement}{46}{section.5.4}%
+\contentsline {section}{Conclusion}{47}{table.caption.46}%
+\contentsline {chapter}{Bibliographie}{48}{table.caption.46}%
+\contentsfinish 
